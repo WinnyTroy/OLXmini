@@ -1,0 +1,72 @@
+@import 'https://fonts.googleapis.com/css?family=Galada';
+.left {
+    font-family: 'Galada', cursive;
+}
+.right {
+    float: right;
+    width: 1050px;
+    height: 925px;
+    border: 1px dashed aqua;
+    background-color: floralwhite;
+}
+.image img {
+    display: inline-block;
+}
+section {
+    display: inline-block;
+    margin: 0 1.5%;
+    width: 1250px;
+    height: 150px;
+    clear: right;
+    position: relative;
+}
+section img {
+    width: 200px;
+}
+.left {
+    background-color: #444c63;
+    float: left;
+    width: 180px;
+    height: 925px;
+}
+.space {
+    margin-top: 80px;
+}
+.space img {
+    width: 200px;
+    height: 250px;
+}
+body {
+    background-color: deepskyblue;
+    height: 350px;
+    ;
+}
+.table {
+    margin-top: 220px;
+}
+.table td {
+    padding-top: 80px;
+    padding-left: 50px;
+}
+.top {
+    height: 250px;
+    background-color: deepskyblue;
+    display: inline-block;
+    width: 100%;
+}
+
+#submit_btn {
+    margin-top: 8px;
+}
+.WT {
+    float: left;
+    font-size: 50px;
+    color: blue;
+    text-align: left;
+    width: 850px;
+}
+.menu {
+    float: right;
+    display: inline-block;
+    padding-top: 30px;
+    height: 150px;
