@@ -1,0 +1,50 @@
+h3{
+margin-top: 50px;
+margin-left: 80px;
+}
+
+
+.addTitleView{
+padding-bottom: 30px;
+}
+
+.addTitleView input{
+margin-left: 80px;
+width: 700px;
+}
+
+.addTitleView p{
+text-align: center;
+}
+
+.addDescView{
+padding-bottom: 30px;
+}
+
+.addDescView input{
+margin-left: 80px;
+width: 700px;
+height: 550px;
+text-align: center;
+}
+
+.addDescView p{
+text-align: center;
+}
+
+.detailsView{
+padding-bottom: 30px;
+}
+
+.detailsView input{
+margin-left: 80px;
+width: 700px;
+}
+
+.detailsView p{
+text-align: center;
+}
+
+.button{
+margin-left: 500px;
+}

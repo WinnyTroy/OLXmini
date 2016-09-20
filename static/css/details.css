@@ -1,0 +1,28 @@
+.background{
+background-color: deepskyblue;
+}
+
+.titleView{
+margin-left: 30px;
+background-color: floralwhite;
+font-size: 50px;
+color: blue;
+text-align: left;
+}
+
+.imageView{
+margin-left: 30px;
+background-color: floralwhite;
+width: 450px;
+height: 340px;
+border: 1px dashed black;
+}
+
+.PriceView{
+margin-top: 170px;
+background-color: floralwhite;
+}
+
+.SellerDetailsView{
+height: 160px;
+}

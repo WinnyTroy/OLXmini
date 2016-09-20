@@ -1,0 +1,37 @@
+{% block linktags %}
+<link rel="stylesheet" href="/static/css/foundation.css">
+<link rel="stylesheet" href="/static/css/add.css">
+
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <form action="{{ url_for('add_item') }}" method="POST">
+<h3>HEY, ADD YOUR ITEMS HERE! </h3>
+
+<div class="addTitleView">
+    <p>ITEM TITLE</p>
+    <textarea name="titleView" placeholder="-- Title --"></textarea>
+    <hr>
+</div>
+<div class="addDescView">
+    <p>DESCRIBE YOUR ITEMS IN A FEW WORDS HERE!</p>
+    <textarea name="descView" placeholder="-- Describe Your Items --"></textarea>
+    <hr>
+</div>
+<div class="detailsView">
+    <p> LEAVE SOME DETAILS HERE! </p>
+    <textarea name="nameView" placeholder="-- Name --"></textarea>
+    <textarea name="numberView" placeholder="-- Mobile Number --"></textarea>
+    <textarea name="neighbourView" placeholder="-- Neighbourhood --"></textarea>
+    <textarea name="emailView" placeholder="-- Email --"></textarea>
+
+<hr>
+</div>
+<div>
+    <input class="large-2 offset-7 columns button" type="submit" value="POST MY AD!">
+</div>
+        </form>
+    </div>
+{% endblock %}
