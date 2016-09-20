@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = '/ root / Documents / Python / mine / OLXmini / OLXmini.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///OLXmini.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -27,6 +27,12 @@ def add_item():
         return render_template("add.html", comments=comments)
     elif request.method == "POST":
         comments.append(request.form["titleView"])
+        comments.append(request.form["descView"])
+        comments.append(request.form["nameView"])
+        comments.append(request.form["numberView"])
+        comments.append(request.form["neighbourView"])
+        comments.append(request.form["emailView"])
+
         print comments
         return redirect(url_for('index'))
 
