@@ -1,28 +1,29 @@
 .background{
-background-color: deepskyblue;
+background-color: #ffffff;
+}
+
+.background p{
+color: #ffffff;
 }
 
 .titleView{
-margin-left: 30px;
-background-color: floralwhite;
+background-color: #000000;
 font-size: 50px;
-color: blue;
-text-align: left;
+text-align: center;
 }
 
 .imageView{
-margin-left: 30px;
-background-color: floralwhite;
-width: 450px;
-height: 340px;
+background-color: #000000;
+width: 550px;
+height: 500px;
 border: 1px dashed black;
 }
 
 .PriceView{
-margin-top: 170px;
-background-color: floralwhite;
+
+background-color: #000000;
 }
 
-.SellerDetailsView{
-height: 160px;
+.PriceView div{
+margin-top: 2%;
 }

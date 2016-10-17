@@ -7,63 +7,41 @@
 
 {% block content %}
 
-<section>
-    <div class="left">
-        <div class="dropbox">
-            <img src="img/dropbox.png" alt="">
-        </div>
-        <table class="table">
-
-            <tr>
-                <td><a href="{{ url_for('index') }}">New Furniture!</a></td>
-
-            </tr>
-            <tr>
-                <td><a href="{{ url_for('index') }}">Deluxe Furniture!</a></td>
-
-            </tr>
-            <tr>
-                <td><a href="{{ url_for('index') }}">Second Hand Furniture</a></td>
-
-            </tr>
-            <tr>
-                <td><a href="{{ url_for('index') }}">Links</a></td>
-
-            </tr>
-            <tr>
-                <td><a href="{{ url_for('index') }}">Home</a></td>
-
-            </tr>
-            <tr>
-                <td>Get Started</td>
-
-            </tr>
-
-            <section id="submit_btn" class="small-12 large-3 columns">
-
-                <input class="button" type="button" value="Upgrade account">
-            </section>
-
-
-        </table>
+<section class="row" style="background-color:#ffffff;">
+    <div class="row">
+        <p>OLXmini</p>
     </div>
-    <div class="right">
-        <div class="top">
-            <div class="WT">
-                <p>OLX-mini
-                </p>
-            </div>
+    <div class="row">
+    <div class="columnAside small-2 medium-3 large-3 columns " >
+        <ol>
+            <img src="/static/img/div.jpg" alt="">
+            <li><a href="{{ url_for('index') }}">New Furniture</a></li>
+            <li><a href="{{ url_for('index') }}">Deluxe Furniture</a></li>
+            <li><a href="{{ url_for('index') }}">Second-Hand Furniture</a></li>
+            <a href="{{ url_for('add_item') }}"> <input class="button" id="submit_btn" type="button" value="ADD ITEM"></a>
+        </ol>
+    </div>
+    <div class="columnMain small-10 medium-9 large-9 columns ">
+        <div class="WT">
 
-        </div>
+       <!--insert the value of the variable inventory at the current point.-->
+             <section class="row">
+        {% for inventory in inventory %}
+                <div class="small-4 columns">
+              <h2>{{ inventory.p_title }}<br></h2>
 
-        <!--insert the value of the variable comment at the current point.-->
-        {% for comment in comments %}
-        <div class="row">
-            {{ comment }}
+               <div class="content">
+                   {{ inventory.p_desc }}<br>
+                   {{ inventory.p_price }}<br>
+               </div>
+                </div>
+                 {% endfor %}
+             </section>
         </div>
-        {% endfor %}
 
     </div>
+        </div>
+
 </section>
 
 {% endblock %}

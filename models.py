@@ -1,47 +1,59 @@
-from app import db
+from sqlalchemy import Column,String, ForeignKey, Integer
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
+from sqlalchemy import create_engine
 
 
-class Users(db.Model):
+Base = declarative_base()
+
+class Users(Base):
     __tablename__ = 'users'
 
-    seller_id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String())
-    mobile_number= db.Column(db.String())
-    neighbourhood = db.Column(db.String())
-    email_address = db.Column(db.String())
+    seller_id = Column(Integer, autoincrement=True, primary_key=True, unique=True,)
+    name = Column(String())
+    mobile_number= Column(String())
+    neighbourhood = Column(String())
+    email_address = Column(String())
 
 
-
-    def __init__(self, seller_id, name, mobile_number, neighbourhood, email_address):
-        self.seller_id = seller_id
+    def __init__(self, name, mobile_number, neighbourhood, email_address):
         self.name = name
         self.mobile_number = mobile_number
         self.neighbourhood = neighbourhood
         self.email_address = email_address
 
     def __repr__(self):
-            return '<User %r>' % self.username
+            return '<User %r>' % self.seller_id
+
+    def __str__(self):
+        return '<User %r>' % self.seller_id
 
 
-
-
-class Inventory(db.Model):
+class Inventory(Base):
     __tablename__ = 'inventories'
 
-    inventories_id = db.Column(db.Integer, primary_key=True)
-    p_title = db.Column(db.String())
-    p_desc = db.Column(db.String())
-    p_price = db.Column(db.String())
+    inventories_id = Column(Integer, autoincrement=True,primary_key=True, unique=True)
+    p_title = Column(String())
+    p_desc = Column(String())
+    p_price = Column(String())
+
+    user_id = Column(Integer, ForeignKey("users.seller_id"))
+    var = relationship(Users)
 
 
     # initialises the model, creating instances for each field
-    def __init__(self, inventories_id, p_title, p_desc, p_price):
-        self.inventories_id = inventories_id
+    def __init__(self, p_title, p_desc, p_price, var):
         self.p_title = p_title
         self.p_desc = p_desc
         self.p_price = p_price
+        self.var = var
 
 
        # represent the object when we query for it.
     def __repr__(self):
-        return '<id {}>'.format(self.id)
+        return '<id {}, Title %s, Description %s, Price %s >'.format(self.inventories_id, self.p_title, self.p_desc,
+                                                                     self.p_price)
+
+
+engine = create_engine("sqlite:///olxmini.db")
+Base.metadata.create_all(engine)

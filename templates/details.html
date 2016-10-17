@@ -8,22 +8,24 @@
 
 <section class="background">
     <div class = "titleView">
-        <p>PRODUCT TITLE</p>
+        <p>{{ inventory.p_title }}</p>
     </div>
-    <div class="row">
-    <div class="large-6 columns imageView">
-
-    </div>
-    <div class="large-5  columns PriceView">
-        <p>ITEM PRICE</p>
-    </div>
-        </div>
-    <div class="SellerDetailsView">
-        <p>Name:</p>
+    <div class="rowid">
+    <div class="large-10 columns imageView">
+        <p>Name:{{ inventory.var.name }}</p>
         <p>Phone Number:</p>
         <p>Neighbourhood:</p>
         <p>Email:</p>
+        <p>Item Description:</p>
+
     </div>
+    <div class="large-5 columns PriceView">
+        <p>ITEM PRICE: </p>
+
+    </div>
+
+    </div>
+
 </section>
 
 {% endblock%}
