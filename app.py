@@ -51,6 +51,7 @@ def add_item():
     return redirect(url_for('index'))
 
 
+# web: gunicorn -w 4 -b "0.0.0.0: $PORT" app:app
 
 # This extracts the stuff that was typed into the textarea in the page from the browser's request
 app.run(debug=True, host='0.0.0.0', port=8080)
