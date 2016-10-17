@@ -53,4 +53,4 @@ def add_item():
 
 
 # This extracts the stuff that was typed into the textarea in the page from the browser's request
-app.run(debug=True, host='0.0.0.0', port=5000)
+app.run(debug=True, host='0.0.0.0', port=8000)
