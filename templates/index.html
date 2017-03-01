@@ -15,9 +15,9 @@
     <div class="columnAside small-2 medium-3 large-3 columns " >
         <ol>
             <img src="/static/img/div.jpg" alt="">
-            <li><a href="{{ url_for('index') }}">New Furniture</a></li>
-            <li><a href="{{ url_for('index') }}">Deluxe Furniture</a></li>
-            <li><a href="{{ url_for('index') }}">Second-Hand Furniture</a></li>
+
+            <li><a href="{{ url_for('index') }}">Log In</a></li>
+            <li><a href="{{ url_for('index') }}">Search</a></li> 
             <a href="{{ url_for('add_item') }}"> <input class="button" id="submit_btn" type="button" value="ADD ITEM"></a>
         </ol>
     </div>
@@ -26,9 +26,12 @@
 
        <!--insert the value of the variable inventory at the current point.-->
              <section class="row">
+                {{ pagination.info }}
+                {{ pagination.links }}
         {% for inventory in inventory %}
                 <div class="small-4 columns">
-              <h2>{{ inventory.p_title }}<br></h2>
+                <a href="{{ url_for('view_particulars', id=inventory_id) }}">{{ inventory.p_title }}</a>
+              <!-- <h3>{{ inventory.p_title }}<br></h3> -->
 
                <div class="content">
                    {{ inventory.p_desc }}<br>
@@ -36,7 +39,22 @@
                </div>
                 </div>
                  {% endfor %}
+                 {{ pagination.links }}
              </section>
+
+
+
+            <script type="text/javascript">
+
+            var pager = new Imtech.Pager();
+            $(document).ready(function() {
+
+            pager.paragraphsPerPage = 5; // set amount elements per page
+            pager.pagingContainer = $('#content'); // set of main container
+            pager.paragraphs = $('div.z', pager.pagingContainer); // set of required containers
+            pager.showPage(1);
+            });
+            </script>
         </div>
 
     </div>
