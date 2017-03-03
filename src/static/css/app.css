@@ -1,0 +1,171 @@
+@import 'https://fonts.googleapis.com/css?family=Galada';
+
+    /*MAIN SECTION*/
+.Main{
+    padding: 100px;
+    display:flex;    
+    align-items:center;
+
+
+}
+.Main #gallery {
+    max-width: 30%;
+    max-height: 50%;
+
+}
+
+#gallery{
+    border: 1px solid blue;
+}
+
+#submit_btn {
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.row p{
+    font-size: 40px;
+    color: #2196f3;
+    text-align: center;
+}
+
+    /*PAGINATION LINKS*/
+
+.pagination-page-info {
+    padding: .6em;
+    padding-left: 0;
+    width: 40em;
+    margin: .5em;
+    margin-left: 0;
+    font-size: 12px;
+}
+.pagination-page-info b {
+    color: black;
+    background: #6aa6ed;
+    padding-left: 2px;
+    padding: .1em .25em;
+    font-size: 150%;
+}
+
+    /*NAVBAR SECTION*/
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+body{
+    background: #f9f2f4;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+a{
+    color: #191919;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.nav{
+    background: #ffffff;
+    min-height: 50px;
+}
+.nav .left{
+    float: left;
+    margin-left: 1em;
+    font-family: 'Galada', cursive;
+}
+.nav .left li{
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 14px;
+    float: left;
+}
+.nav .left li a{
+    display: block;
+    padding: 9px 15px;
+    line-height: 30px;
+}
+.nav .left li a:hover{
+    background: #f2f2f2;
+}
+
+.nav .right{
+    float: right;
+    margin-right: 1em;
+    font-family: 'Galada', cursive;
+}
+.nav .right li{
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 14px;
+    float: left;
+}
+.nav .right li a{
+    display: block;
+    padding: 9px 15px;
+    line-height: 30px;
+}
+.nav .right li a:hover{
+    background: #f2f2f2;
+}
+
+.toggle-nav{
+    display: none;
+}
+
+.nav-mobile style{
+    display: block;
+}
+
+
+@media only screen and (max-width: 640px){
+    .nav{
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .toggle-nav{
+        display: block;
+        padding: 10px;
+        position: absolute;
+        right: 10px;
+        line-height: 30px;
+    }
+    .toggle-nav:after{
+        content: ' Menu';
+    }
+
+    .nav-mobile{
+        display: none;
+    }
+
+    .style-mobile{
+        background: #ffffff;
+        top : 51px;
+        position : absolute;
+        width : 100%;
+    }
+
+    .style-mobile li{
+        display: block;
+        width: 100%;
+    }
+
+    .nav .right{
+        display: block;
+        float: none;
+        margin: 0em;
+    }
+
+    .nav .left{
+        display: block;
+        float: none;
+        margin: 0em;
+    }
+}
+
+@media only screen and (min-width: 641px){
+    .nav-mobile {
+        display:block !important;
+    }
+}
+
+
+
